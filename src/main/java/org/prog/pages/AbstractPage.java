@@ -1,8 +1,7 @@
 package org.prog.pages;
 
 import org.openqa.selenium.WebDriver;
-import org.prog.pages.locators.GooglePageSelectors;
-import org.prog.pages.util.DataHolder;
+import org.prog.util.DataHolder;
 public abstract class AbstractPage {
 
     protected final WebDriver driver;

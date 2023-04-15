@@ -1,4 +1,4 @@
-package org.prog.pages.rozetka;
+package org.prog.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
