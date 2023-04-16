@@ -9,6 +9,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
+
 //варіант з використанням локаторів
 public class GooglePage extends AbstractPage {
     private final static String URL = "https://google.com/";

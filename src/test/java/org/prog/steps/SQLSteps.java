@@ -37,7 +37,6 @@ public class SQLSteps {
             throw new RuntimeException(e);
         }
     }
-
     @Given("I print all users in DB with {string} = {string}")
     public void setupConnection(String parameter, String value) throws ClassNotFoundException, SQLException {
         String query = String.format(FILTER_BY_PARAMETER, parameter, value);
@@ -59,7 +58,7 @@ public class SQLSteps {
         Connection con;
 
         String hostName = InetAddress.getLocalHost().getHostName();
-        if ("TSELSE3871808".equals(hostName)) {
+        if ("BEZZUBYAK".equals(hostName)) {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db", "user", "password");
         } else {
             con = DriverManager.getConnection("jdbc:mysql://mysql:3306/db", "user", "password");

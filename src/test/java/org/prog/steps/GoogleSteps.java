@@ -18,22 +18,13 @@ import org.prog.pages.locators.GooglePageSelectors;
 import org.prog.util.DataHolder;
 
 public class GoogleSteps {
-
     public static WebDriver driver;
     private GooglePage googlePage = new GooglePage(driver);
 
-    @Before
-    public void setUp() {
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        googlePage = new GooglePage(driver);
-    }
     @Given("I open Google")
     public void openGoogle() {
         googlePage.loadPage();
-        googlePage.acceptCookiesIfPresent();//new
+        googlePage.acceptCookiesIfPresent();
     }
 
     //робота з DataHolder
@@ -50,7 +41,6 @@ public class GoogleSteps {
         googlePage.setSearchValue(getUserName(userDto));
         googlePage.performSearch();
     }
-
 
     @Then("I see that search results contain the {string} name")
     public void checkResultName(String alias) {
@@ -136,10 +126,10 @@ public class GoogleSteps {
     }*/
 
 //SQL off
-    @After
+  /*  @After
     public void tearDown() {
         driver.quit();
-    }
+    }*/
 }
 
 
